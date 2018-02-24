@@ -1,0 +1,21 @@
+﻿@model Domain.DomainModels.Persons.Person
+
+<hr />
+<div class="row">
+    <div class="col-md-2">
+        <img src="http://placehold.it/150x150" />
+    </div>
+    <div class="col-md-8">
+        <h3>@Model.FirstName @Model.LastName</h3>
+        <p>@Model.FirstName was born on @Model.BirthDate.ToString("D").</p>
+        <p>Likes Music: @Html.DisplayFor(model => model.LikesMusic)</p>
+        @{
+            ViewBag.ListDescription = "Skills";
+            foreach (var s in Model.Skills)
+            {
+                       
+                  Html.RenderPartial("_StringCollection", s.Skill);
+            }
+        }
+    </div>
+</div>

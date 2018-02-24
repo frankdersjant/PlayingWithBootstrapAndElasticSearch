@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayingWithBootstrapAndElasticSearch", "PlayingWithBootstrapAndElasticSearch\PlayingWithBootstrapAndElasticSearch.csproj", "{FF43DD4F-3212-4D95-BCDB-12A01EC06291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B070BA86-BE8B-4B67-977A-CE7DE789FBC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{EF3EDAF2-89C8-40B8-9F8B-FBCE26EF9205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchService", "ElasticsearchService\ElasticsearchService.csproj", "{EF1F2381-3C3D-4752-AE95-68BB6462C1C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF43DD4F-3212-4D95-BCDB-12A01EC06291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF43DD4F-3212-4D95-BCDB-12A01EC06291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF43DD4F-3212-4D95-BCDB-12A01EC06291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF43DD4F-3212-4D95-BCDB-12A01EC06291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B070BA86-BE8B-4B67-977A-CE7DE789FBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B070BA86-BE8B-4B67-977A-CE7DE789FBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B070BA86-BE8B-4B67-977A-CE7DE789FBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B070BA86-BE8B-4B67-977A-CE7DE789FBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3EDAF2-89C8-40B8-9F8B-FBCE26EF9205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3EDAF2-89C8-40B8-9F8B-FBCE26EF9205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3EDAF2-89C8-40B8-9F8B-FBCE26EF9205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3EDAF2-89C8-40B8-9F8B-FBCE26EF9205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1F2381-3C3D-4752-AE95-68BB6462C1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1F2381-3C3D-4752-AE95-68BB6462C1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1F2381-3C3D-4752-AE95-68BB6462C1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1F2381-3C3D-4752-AE95-68BB6462C1C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

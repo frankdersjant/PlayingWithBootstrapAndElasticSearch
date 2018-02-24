@@ -1,0 +1,21 @@
+﻿@using PlayingWithBootstrap.ViewModels;
+
+<ul class="nav navbar-nav">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Notifications", "Index", "Notification")</li>
+
+    @if (ViewBag.Notices != null)
+    {
+        foreach (NotificationViewModel notification in ViewBag.Notices)
+        {
+            <li>
+                <a href="#">
+                    @notification.NotificationType
+                    <span class="badge badge-@notification.BadgeClass" id = "badge-navbar">
+                        @notification.Count
+                    </span>
+                </a>
+            </li>
+        }
+    }
+</ul>

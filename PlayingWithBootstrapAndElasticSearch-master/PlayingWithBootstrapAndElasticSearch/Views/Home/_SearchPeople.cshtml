@@ -1,0 +1,12 @@
+﻿@using Domain.DomainModels
+@model IEnumerable<Domain.DomainModels.Persons.Person>
+
+@Html.DisplayForModel(Model)
+
+@if (!Model.Any())
+{
+    <h3>Sorry!</h3>
+    <p>Looks like there's no results for that person.</p>
+}
+
+

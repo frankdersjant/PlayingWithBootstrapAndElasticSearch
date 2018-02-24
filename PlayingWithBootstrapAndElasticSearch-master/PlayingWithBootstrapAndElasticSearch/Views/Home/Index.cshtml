@@ -1,0 +1,73 @@
+﻿@model IEnumerable<PlayingWithBootstrap.ViewModels.PersonVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All the Peeps</h2>
+
+<p>
+    @{ Html.RenderPartial("_SearchPersonForm"); }
+</p>
+
+<table class="table table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LikesMusic)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @foreach (Domain.DomainModels.SkillData s in item.Skills)
+                {
+                    <span class="label label-primary">@s.Skill</span>
+                }
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LikesMusic)
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
+</table>
+
+<div id="people-data" class="hidden">
+    @Html.DisplayForModel(Model)
+</div>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#search-btn").click(function () {
+                var searchTerm = $("#search-text").val();
+                $.get("/Home/SearchPeople", { searchText: searchTerm })
+                    .success(function (data) {
+                        $("#people-data").removeClass("hidden").html(data);
+                    });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PlayingWithBootstrap.ViewModels.UserViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="newnotification">
+    <p>
+        <span>
+            <a href="@Url.Action("Add")" class="btn btn-warning">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                Create New Notification
+            </a>
+        </span>
+    </p>
+</div>
+
+<table class="table table-responsive table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td></td>
+        </tr>
+
+
+    }
+
+</table>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Notifications</h3>
+    </div>
+    <div class="panel-body">
+    </div>
+    <ul class="list-group">
+        @if (ViewBag.Notices != null)
+        {
+            foreach (PlayingWithBootstrap.ViewModels.NotificationViewModel notification in ViewBag.notices)
+            {
+                <li class="list-group-item">
+                    <a href="">
+                        @notification.NotificationType
+                        <span class="badge badge-@notification.BadgeClass">
+                            @notification.Count
+                        </span>
+                    </a>
+                    <div class="button btn-default"></div>
+                </li>
+            }
+        }
+    </ul>
+</div>

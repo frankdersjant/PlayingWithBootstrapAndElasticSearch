@@ -1,0 +1,32 @@
+﻿@using Domain.DomainModels.Notification
+@model IEnumerable<Notification>
+
+<div class="table-responsive">
+    <div table="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var notification in Model)
+        {
+            var badgeClass = NotificationTypes.Email == notification.NotificationType
+                        ? "label-succes"
+                        : "label-info";
+            <tr>
+                <td>
+                    <span class="label @badgeClass">@notification.NotificationType</span>
+                </td>
+                <td>
+                    @notification.Title
+                </td>
+                <td></td>
+            </tr>
+        }
+    </div>
+</div>
